@@ -1,0 +1,222 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 24, 2014, 9:07:03 PM
+    Author     : Binglin
+    css文件中不能用//做注释，只能用/*
+*/
+body {
+    background-color: black;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    color: white;
+    border-radius:4px;
+    border:0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*主界面和gameOver界面的可见区域*/
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*主界面可见区域*/
+#mainWrapper {
+    background-color: papayawhip;
+}
+
+/*”这是什么花“*/
+#title {
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    display: inline-block;
+    margin-left: 16px;
+    margin-top: 13px;
+}
+
+/*用于定位flower*/
+#frame {
+    background: papayawhip;
+}
+
+/*用于定位四个按钮*/
+#functionarea {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#flower {
+    position: absolute;
+    border-radius: 5px;
+}
+
+/*四个按钮*/
+.answers {
+    color: white;
+    font-weight: bold;
+    float: left;    /*设为左浮动避免按钮字体变化时影响按钮垂直位置*/
+
+    text-shadow:1px 1px 1px #333;
+    border-radius: 5px;
+    border:1px solid #d2a000;
+    box-shadow: 0 1px 2px #fedd71 inset,0 -1px 0 #a38b39 inset,0 -2px 3px #fedd71 inset;
+    background: -webkit-linear-gradient(top,#fece34,#d8a605);
+    background: -moz-linear-gradient(top,#fece34,#d8a605);
+    background: -ms-linear-gradient(top,#fece34,#d8a605); /*目前IE还不支持该特性，所以可能在IE浏览器下颜色不正常*/
+    background: linear-gradient(top,#fece34,#d8a605);
+}
+
+/*右上角的星星标志*/
+#star {
+    float: right;
+    margin-top: 12px;
+    margin-right: 2px;    
+}
+
+/*星星右边的分数*/
+#score {
+    float: right;
+    color: blueviolet;
+    margin-top: 12px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+/*gameOver界面的可见区域*/
+#gameOverWrapper {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/*文字*/
+#gameOver {
+    height: 100px;
+    font-size: 50px;
+    line-height: 100px;
+    font-weight: bold;
+}
+/*显示玩家的成绩*/
+#hiScore {
+    width: 320px;
+    height: 45px;
+    font-size: 26px;
+    color: orangered;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#playerName {
+    height: 28px;
+    width: 80px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#inputNameGo {
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: orange;
+    background: black;
+    border:2px solid #d2a000;
+}
+
+/*显示前5名最高分数玩家*/
+#topPlayers {
+    width: 220px;
+    height: 200px;
+    border: 1px solid;
+    border-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+/*最高分数玩家的名字*/
+#topPlayersName {
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+/*最高分数玩家的分数*/
+#topPlayersScore {
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+/*重新玩的按钮*/
+#playAgain {
+    width: 220px;
+    height: 50px;
+    background-color: black;
+    color: orange;
+    font-size: 30px;
+    text-align: center;
+    border-radius:4px;
+    border:2px solid #d2a000;
+    margin-top: 20px;
+}
+
+
+/*适配iPhone5及以下分辨率*/
+@media (min-device-width:320px) {
+    .wrapper {
+        width: 320px;
+        height: 480px;
+    }
+    #frame {
+        width: 282px;
+        height: 282px;
+        margin: -10px 15px 0px 0px ;
+    }
+    #flower {
+        height: 280px;
+        width: 280px;
+        margin: -10px 15px 10px 20px;
+    }
+    .answers {
+        height:45px;
+        width: 142px;
+        margin: 0px 3px 4px 2px;
+    }
+}
+
+/*适配iPhone6分辨率*/
+@media (min-device-width:375px) {
+    .wrapper {
+        width: 375px;
+        height: 579px;
+    }
+    #frame {
+        width: 340px;
+        height: 340px;
+        margin: 0px 15px 0px 0px ;
+    }
+    #flower {
+        height: 330px;
+        width: 330px;
+        margin: -10px 15px 10px 20px;
+    }
+    .answers {
+        height:60px;
+        width: 162px;
+        margin: -10px 8px 20px 3px;
+    }
+}
+
